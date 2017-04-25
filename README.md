@@ -102,7 +102,7 @@ You can use <a href="https://www.npmjs.com/package/sheetify">sheetify</a> to ins
 
 ```const css = require('sheetify')```
 
-Then in your createdCallback add:
+Then in your createdCallback pass your in local CSS file and it will inject it into the page:
 
 ```css('./index.css')```
 
@@ -112,7 +112,7 @@ Alternatively just include the CSS file in your component directory as part of y
 
 ```require('document-register-element')```
 
-This polyfill from <a href="https://github.com/WebReflection">@webreflection</a> works very nicely in the browsers that don't support custom elements yet which are IE, Edge and FF as of 4/17
+This <a href="https://www.npmjs.com/package/document-register-element">polyfill</a> from <a href="https://github.com/WebReflection">@webreflection</a> works very nicely in the browsers that don't support custom elements yet which are IE, Edge and FF as of 4/17
 
 ### Transpiling
 
