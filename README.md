@@ -138,24 +138,17 @@ So you could do some preliminary server side rendering or just use this content 
 
 ### Hello world
 
-[hello world sample](hello-world/)
+[hello world sample](examples/hello-world/)
 
 ### Nested Hello world
 
-[nested hello world sample](nested/)
-
-<!--
-### Fully polyfilled and transpiled
+[nested hello world sample](examples/nested/)
 
 ### Web components chatting
-(Demonstrates lifecycle callbacks)
-- retrieve list of nouns
-- randomize list
-- say hello noun[random]
-- after random interval call other component on page
-- when called say hello noun[ramdom]
-- repeat calling other component
 
+[nested hello world sample](examples/chatting/)
+
+<!--
 ### Real world Example
 - Display list of widgets
   - has initial server side rendering of widget info
@@ -168,10 +161,11 @@ So you could do some preliminary server side rendering or just use this content 
   - displays single widget info
   - updates HTML5 history so can back button to last view
 
+### Fully polyfilled and transpiled
+
+-->
 ## Additional Web Components Resources
 
 <a href="https://w3c.github.io/webcomponents/spec/custom/">W3C specification</a>
 
 <a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements">Google developers: Custom Elements v1</a>
-
--->
