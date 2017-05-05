@@ -23,7 +23,7 @@ class Chatter extends HTMLElement {
     return termsArr[parseInt(Math.random() * termsArr.length)];
   }
   resetHTML() {
-    this.innerHTML = `hello ${this.greeting}`;
+    this.innerHTML = `${this.greeting}`;
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.greeting = newVal;
@@ -32,7 +32,7 @@ class Chatter extends HTMLElement {
       var me = this;
       setTimeout(function() {
         me.chatBuddy.setAttribute('greeting',termsArr[parseInt(Math.random() * termsArr.length)])
-      },Math.random() * 3500)
+      },1500)
     } else {
       console.log(this.chatBuddy)
     }

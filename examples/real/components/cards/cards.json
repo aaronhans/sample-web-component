@@ -1,0 +1,34 @@
+{
+  "widgets": [
+    {
+      "id":"1",
+      "name":"Widget 1",
+      "graphic":"gears/1.png"
+    },
+    {
+      "id":"2",
+      "name":"Widget 2",
+      "graphic":"gears/2.png"
+    },
+    {
+      "id":"3",
+      "name":"Widget 3",
+      "graphic":"gears/3.png"
+    },
+    {
+      "id":"4",
+      "name":"Widget 4",
+      "graphic":"gears/4.png"
+    },
+    {
+      "id":"5",
+      "name":"Widget 5",
+      "graphic":"gears/5.png"
+    },
+    {
+      "id":"6",
+      "name":"Widget 6",
+      "graphic":"gears/6.png"
+    },
+  ]
+}
