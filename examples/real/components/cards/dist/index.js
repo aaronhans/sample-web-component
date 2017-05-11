@@ -51,13 +51,13 @@ function getData(callback) {
 
 function populateTemplate(el, data) {
   el.innerHTML = require('./template.js')(data);
+  var singleWidget = document.querySelector('my-widget');
   el.querySelectorAll('.cards a').forEach(function (el) {
     el.addEventListener('click', function (event) {
       event.preventDefault();
-      console.log(this);
+      singleWidget.setAttribute('widgetid', this.dataset.widgetId);
+      console.log('set value to: ' + singleWidget.getAttribute('widgetid'));
     });
-    // find the widget component
-    // set the clicked widget id attribute on it
   });
 }
 
@@ -66,7 +66,7 @@ function populateTemplate(el, data) {
 
 module.exports = function (data) {
   return '<ul class="cards">\n    ' + data.widgets.map(function (item) {
-    return '<li class="widget-card">\n        <a href="/widgets/' + item.id + '">\n          <span class="widget-name">' + item.name + '</span>\n          <img class="widget-graphic" src="https://aaronhans.github.io/sample-web-component/examples/real/assets/' + item.graphic + '">\n        </a>\n      </li>';
+    return '<li class="widget-card">\n        <a href="/widgets/' + item.id + '" data-widget-id="' + item.id + '">\n          <span class="widget-name">' + item.name + '</span>\n          <img class="widget-graphic" src="https://aaronhans.github.io/sample-web-component/examples/real/assets/' + item.graphic + '">\n        </a>\n      </li>';
   }).join('\n      ') + '\n  </ul>';
 };
 

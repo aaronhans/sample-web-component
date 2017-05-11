@@ -3,13 +3,24 @@ class MyWidget extends HTMLElement {
     super();
   }
   static get observedAttributes() {
-    return ['widgetId'];
+    return ['widgetid']; // do not use camel case in your attribute names!!
+  }
+  connectedCallback() {
+    this.setAttribute('widgetid','0')
+    console.log('my id is: '+this.getAttribute('widgetid'))
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
+    console.log('attribute changed')
+    console.log(attrName)
     let el = this;
-    getData(newVal,function(data) {
-      el.innerHTML = require('./template.js')(data);
-    })
+    if(newVal==0) {
+      //hide single widget, bring back all widgets
+    } else {
+      getData(newVal,function(data) {
+        console.log(data)
+        //el.innerHTML = require('./template.js')(data);
+      })
+    }
   }
   // templatize single widget data
   // expand to full screen, shrink card view

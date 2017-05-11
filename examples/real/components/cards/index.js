@@ -24,10 +24,12 @@ function getData(callback) {
 
 function populateTemplate(el,data) {
   el.innerHTML = require('./template.js')(data);
+  var singleWidget = document.querySelector('my-widget');
   el.querySelectorAll('.cards a').forEach(function(el) {
     el.addEventListener('click',function(event) {
       event.preventDefault();
-      document.querySelector('my-widget').setAttribute('widgetId',this.dataset.widgetId);
+      singleWidget.setAttribute('widgetid',this.dataset.widgetId);
+      console.log('set value to: '+singleWidget.getAttribute('widgetid'))
     })
   })
 }
