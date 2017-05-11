@@ -3,8 +3,9 @@ class MyCards extends HTMLElement {
     super();
   }
   connectedCallback() {
+    let el = this;
     getData(function(data) {
-      populateTemplate(this,data);
+      populateTemplate(el,data);
     })
   }
 }
@@ -12,15 +13,21 @@ class MyCards extends HTMLElement {
 window.customElements.define('my-cards', MyCards);
 
 function getData(callback) {
-  fetch('cards.json')
+  fetch('https://aaronhans.github.io/sample-web-component/examples/real/assets/cards.json')
   .then(function(response) {
-    return response.json()
+    return response.text()
     .then(function(json) {
-      callback(json)
+      callback(JSON.parse(json))
     });
   });
 }
 
 function populateTemplate(el,data) {
   el.innerHTML = require('./template.js')(data);
+  el.querySelectorAll('.cards a').forEach(function(el) {
+    el.addEventListener('click',function(event) {
+      event.preventDefault();
+      document.querySelector('my-widget').setAttribute('widgetId',this.dataset.widgetId);
+    })
+  })
 }
