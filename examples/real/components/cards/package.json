@@ -35,7 +35,7 @@
   "directories": {},
   "keywords": [],
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "transpile": "browserify index.js > dist/index.js"
   },

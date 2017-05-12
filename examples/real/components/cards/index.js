@@ -29,7 +29,6 @@ function populateTemplate(el,data) {
     el.addEventListener('click',function(event) {
       event.preventDefault();
       singleWidget.setAttribute('widgetid',this.dataset.widgetId);
-      console.log('set value to: '+singleWidget.getAttribute('widgetid'))
     })
   })
 }

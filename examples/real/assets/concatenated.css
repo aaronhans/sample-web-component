@@ -22,13 +22,6 @@
   padding: 8px;
   color: white;
 }
-footer {
-  width: 100%;
-  text-align: center;
-  height: 50px;
-  border-top: solid 1px;
-  line-height: 50px;
-}
 ul {
   list-style: none;
 }
@@ -36,10 +29,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
   min-height: 370px;
-  margin: 24px auto 0 auto;
-  width: 1000px;
+  margin: 30px auto;
 }
 .widget-card {
   width:200px;
@@ -64,6 +55,43 @@ ul {
   font-size: 24px;
   color: #000;
 }
+.close-panel {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  line-height: 32px;
+  text-align: center;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 body {
   margin:0;padding:0;
+}
+.widgets {
+  position:relative;
+}
+.component-container {
+  overflow:hidden;
+}
+.component-container {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity .5s ease-out .2s;
+  opacity:1;
+  width:100%;
+}
+.component-container.open {
+  opacity:1;
+}
+.component-container.closed {
+  opacity:0;
 }

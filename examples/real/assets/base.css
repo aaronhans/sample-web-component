@@ -1,3 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin:0;padding:0;
+}
+.widgets {
+  position:relative;
+}
+.component-container {
+  overflow:hidden;
+}
+.component-container {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity .5s ease-out .2s;
+  opacity:1;
+  width:100%;
+}
+.component-container.open {
+  opacity:1;
+}
+.component-container.closed {
+  opacity:0;
 }

@@ -56,7 +56,6 @@ function populateTemplate(el, data) {
     el.addEventListener('click', function (event) {
       event.preventDefault();
       singleWidget.setAttribute('widgetid', this.dataset.widgetId);
-      console.log('set value to: ' + singleWidget.getAttribute('widgetid'));
     });
   });
 }
@@ -65,9 +64,9 @@ function populateTemplate(el, data) {
 'use strict';
 
 module.exports = function (data) {
-  return '<ul class="cards">\n    ' + data.widgets.map(function (item) {
-    return '<li class="widget-card">\n        <a href="/widgets/' + item.id + '" data-widget-id="' + item.id + '">\n          <span class="widget-name">' + item.name + '</span>\n          <img class="widget-graphic" src="https://aaronhans.github.io/sample-web-component/examples/real/assets/' + item.graphic + '">\n        </a>\n      </li>';
-  }).join('\n      ') + '\n  </ul>';
+  return '<div class="component-container">\n    <ul class="cards">\n      ' + data.widgets.map(function (item) {
+    return '<li class="widget-card">\n          <a href="/widgets/' + item.id + '" data-widget-id="' + item.id + '">\n            <span class="widget-name">' + item.name + '</span>\n            <img class="widget-graphic" src="https://aaronhans.github.io/sample-web-component/examples/real/assets/' + item.graphic + '">\n          </a>\n        </li>';
+  }).join('\n      ') + '\n    </ul>\n  </div>';
 };
 
 },{}]},{},[1]);

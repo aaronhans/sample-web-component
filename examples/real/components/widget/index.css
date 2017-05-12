@@ -1,0 +1,13 @@
+.close-panel {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  line-height: 32px;
+  text-align: center;
+  font-family: sans-serif;
+}

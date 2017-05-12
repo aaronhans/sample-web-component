@@ -5,10 +5,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
   min-height: 370px;
   margin: 30px auto;
-  width: 750px;
 }
 .widget-card {
   width:200px;

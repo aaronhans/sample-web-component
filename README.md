@@ -1,6 +1,16 @@
+# Why web components?
+
+So you can organize all of the HTML, CSS and Javascript required for a section of the web app into a single unit.
+
+Other libraries offer componentization but achieving just by following the W3C standard gives our code more longevity. We can use the plain web components we develop with different libraries and aren't tying our code to a specific version of an underlying framework.
+
+# Can I use them now
+
+The most important part of web components: custom elements is well supported now 
+
 # Custom Tag Example
 
-How to use the custom tag part of the web components specification so you can create your own tags like:
+Create your own tags like:
 
 ```<my-component></my-component>```
 
@@ -131,9 +141,6 @@ Your custom tag is ignored by browser rendering and internal HTML is displayed
 </my-component>
 ```
 
-So you could do some preliminary server side rendering or just use this content to pass in data instead of using parameters
-
-
 ## Examples
 
 ### Hello world
@@ -144,24 +151,19 @@ So you could do some preliminary server side rendering or just use this content 
 
 [nested hello world sample](examples/nested/)
 
+### Browserified
+
+[browserified](examples/browserified) This version of a hello world component has a separate template file included with a require statement and it is packaged via the browserify command:
+
+```
+browserify my-component.js > dist.js
+```
+
+This creates the distribution file by packaging all the required files into a single file so we don't have to retrieve any more templates or compile them before transforming the content.  
+
 ### Web components chatting
 
 [nested hello world sample](examples/chatting/)
-
-<!--
-### Real world Example
-- Display list of widgets
-  - has initial server side rendering of widget info
-  - retrieves widget list from xhr endpoint
-  - displays all widgets, adds js listeners on each widget link to animate instead of go directly
-- Drill down into individual widgets  
-  - listens for click on single widget
-  - animates into different view
-  - requests single widget data from xhr endpoint
-  - displays single widget info
-  - updates HTML5 history so can back button to last view
-
-### Fully polyfilled and transpiled
 
 -->
 ## Additional Web Components Resources

@@ -1,0 +1,12 @@
+{
+  "name": "@zaplabs/widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "browserify index.js > dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
