@@ -2,11 +2,11 @@
 
 So you can organize all of the HTML, CSS and Javascript required for a section of the web app into a single unit.
 
-Other libraries offer componentization but achieving just by following the W3C standard gives our code more longevity. We can use the plain web components we develop with different libraries and aren't tying our code to a specific version of an underlying framework.
+Other libraries offer componentization but achieving just by following the W3C standard gives our code more longevity. We can use the plain web components we develop alone or with different libraries and aren't tying our code to a specific version of an underlying framework.
 
 # Can I use them now
 
-The most important part of web components: custom elements is well supported now 
+The most important part of web components: custom elements is well supported now. Creating an npm package out of your web component and its dependencies gives you an easily distributable module that can be reused with a require statement and custom element placement.
 
 # Custom Tag Example
 
