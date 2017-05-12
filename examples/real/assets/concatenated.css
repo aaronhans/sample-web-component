@@ -22,12 +22,10 @@
   padding: 8px;
   color: white;
 }
-ul {
-  list-style: none;
-}
 .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   flex-direction: row;
   min-height: 370px;
   margin: 30px auto;
@@ -73,6 +71,10 @@ ul {
 }
 body {
   margin:0;padding:0;
+}
+ul {
+  list-style: none;
+  padding:0;margin:0
 }
 .widgets {
   position:relative;
